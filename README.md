@@ -64,7 +64,7 @@ $scope.onReaded = function( e, file ){
 This is `swf` path, if you use ie8 ~ ie9.
 
 ###multiple
-Input multiple property/
+Input multiple property.
 
 ###debug-mode
 Use `swf` only.
