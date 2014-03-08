@@ -38,7 +38,6 @@ Set some attrs of element.
 size:{{file.size | fileSize}}
 
 <img ng-src="{{img}}">
-
 ```
 
 Set a reader method.
@@ -53,7 +52,6 @@ $scope.onReaded = function( e, file ){
   $scope.img = e.target.result;
   $scope.file = file;
 };
-
 ```
 
 ##Attr
@@ -62,12 +60,12 @@ $scope.onReaded = function( e, file ){
 This is `swf` path, if you use ie8 ~ ie9.
 
 ###multiple
-Input multiple property
+Input multiple property/
 
 ###debug-mode
-Use swf only
+Use `swf` only.
 
-ex:
+**ex:**
 
 Set the attr on tag.
 
@@ -81,7 +79,7 @@ debug-mode="true"
 
 This is file reader method,when you selected file to call `read-method` method.
 
-ex:`readAsDataURL`、`readAsText`、`readAsBinaryString`
+**ex:** `readAsDataURL`、`readAsText`、`readAsBinaryString`
 
 Set the attr.
 ```
