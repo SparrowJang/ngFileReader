@@ -1,0 +1,22 @@
+{
+  "name": "ngFileReader",
+  "version": "0.0.1",
+  "description": "This is file reader component on angular.",
+  "main": "src/ngFileReader",
+  "keywords": [
+    "file",
+    "reader",
+    "html5",
+    "flash"
+  ],
+  "devDependencies":{
+    "grunt": "~0.4.1",
+    "grunt-open": "~0.2.0",
+    "express":"~3.2.2",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-express":"~1.2.1",
+    "matchdep": "~0.1.2"
+  },
+  "author": "sparrow.jang",
+  "license": "MIT"
+}
