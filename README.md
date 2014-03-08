@@ -5,6 +5,10 @@ ngFileReader
 
 This is file reader component on angular.
 
+##LiveDemo
+
+[demo](http://sparrowhome.twbbs.org/example/bower_components/ngFileReader/example/)
+
 ##Support
 
 * IE8+
@@ -99,7 +103,7 @@ It will trigger this event if you has selected.
 ###on-readed `Event`
 It will trigger this event When the selected file has readed by file reader.
 
-##Demo
+##Run
  
 run a server:
 ```
