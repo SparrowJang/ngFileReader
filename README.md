@@ -58,7 +58,7 @@ $scope.onReaded = function( e, file ){
 };
 ```
 
-##Attr
+##Attribute
 
 ###filereader
 This is `swf` path, if you use ie8 ~ ie9.
