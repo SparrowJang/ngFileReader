@@ -114,6 +114,11 @@ Transfer file size from number to unit.
 {{file.size | fileSize}}
 ```
 
+You can write this if you need round off to the 2nd decimal place.
+```
+{{file.size | fileSize:2}}
+```
+
 ##Run
  
 run a server:
