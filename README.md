@@ -113,3 +113,7 @@ grunt server
 Finally,open your brower,enter [http://localhost:3000/example/index.html](http://localhost/example/index.html).
 
 
+##Minification
+
+Just run `npm install` to install dependencies. Then run `grunt` for minification.
+
