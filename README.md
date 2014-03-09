@@ -103,6 +103,17 @@ It will trigger this event if you has selected.
 ###on-readed `Event`
 It will trigger this event When the selected file has readed by file reader.
 
+##Filter
+
+###fileSize
+
+Transfer file size from number to unit.
+
+```
+<!-- 1024 => 1 m -->
+{{file.size | fileSize}}
+```
+
 ##Run
  
 run a server:
