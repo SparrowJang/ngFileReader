@@ -29,14 +29,15 @@ And The base64 size only limit 32kb if you use base64 to set image on IE8.
 
 ##Install
 
-```
+```bash
 bower install ngFileReader
 ```
 
 ##Usage
 
 Set some attrs of element.
-```
+
+```html
 <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod"  multiple></div>
 
 size:{{file.size | fileSize}}
@@ -45,12 +46,14 @@ size:{{file.size | fileSize}}
 ```
 
 Set a reader method.
-```
+
+```js
 $scope.readMethod = "readAsDataURL";
 ```
 
 Add a `on-readed` callback to set file size and img data.
-```
+
+```js
 $scope.onReaded = function( e, file ){
 
   $scope.img = e.target.result;
@@ -86,12 +89,14 @@ This is file reader method,when you selected file to call `read-method` method.
 **ex:** `readAsDataURL`、`readAsText`、`readAsBinaryString`
 
 Set the attr.
-```
+
+```js
 read-method="readMethod"
 ```
 
 Set a string value.
-```
+
+```js
 $scope.readMethod = "readAsDataURL"
 ```
 
@@ -109,20 +114,22 @@ It will trigger this event When the selected file has readed by file reader.
 
 Transfer file size from number to unit.
 
-```
+```html
 <!-- 1024 => 1 m -->
 {{file.size | fileSize}}
 ```
 
 You can write this if you need round off to the 2nd decimal place.
-```
+
+```html
 {{file.size | fileSize:2}}
 ```
 
 ##Run
  
 run a server:
-```
+
+```bash
 grunt server
 ```
  
