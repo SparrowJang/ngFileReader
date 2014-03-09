@@ -159,7 +159,7 @@
               output = total,
               index = -1;
 
-          while ( output > 1024 ) {
+          while ( output >= 1024 ) {
 
             var output = output / 1024;
 
