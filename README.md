@@ -26,7 +26,7 @@ You need load **jQuery** and **FileReader** if browser is not support `FileReade
 
 And The base64 size only limit 32kb if you use base64 to set image on IE8.
 
-You also use other [FileReader](https://github.com/Phlow2001/FileReader) version,if you don't want to use `fixed` position.
+You also use other [FileReader](https://github.com/Phlow2001/FileReader) version,if you don't want to use `fixed` position by flash.
 
 ##Install
 
