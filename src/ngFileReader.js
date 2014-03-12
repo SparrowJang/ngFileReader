@@ -92,12 +92,29 @@
 
         if ( window.File == undefined ) {
 
-          $elem.fileReader({
+          var position = $elem.css('position'),
 
+          initParams = {
             multiple:inputParams.multiple,
             debugMode:attrs.debugMode,
-            filereader:scope.filereader
-          });
+            filereader:scope.filereader,
+          };
+
+          if ( position == "" || position == "static" ) {
+
+            $elem.css( "position", "relative" );
+
+            $.extend( initParams,{
+              appendTo:$elem,
+              position:"absolute",
+              offsetCss:function(){
+                return {left:0,top:0};
+              }
+            });
+
+          }
+
+          $elem.fileReader( initParams );
 
 
         } else {
