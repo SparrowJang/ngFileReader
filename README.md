@@ -116,7 +116,7 @@ It will trigger this event When the selected file has readed by file reader.
 Transfer file size from number to unit.
 
 ```html
-<!-- 1024 => 1 m -->
+<!-- 1048576 => 1 m -->
 {{file.size | fileSize}}
 ```
 
