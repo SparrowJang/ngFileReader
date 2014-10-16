@@ -13,7 +13,7 @@
 </head>
 <body ng-app="ngFileReader" ng-controller="fileCtrl">
 
-<div ng-file-reader on-selected="onSelected( files )" on-readed="onReaded( event, file )" read-method="readMethod" filereader="../vendor/filereader.swf" multiple debug-mode="true"></div>
+<div ng-file-reader accept="image/gif, image/jpeg, image/png" on-selected="onSelected( files )" on-readed="onReaded( event, file )" read-method="readMethod" filereader="../vendor/filereader.swf" multiple debug-mode="true"></div>
 
 <img src="{{imgData}}" alt="" />
 

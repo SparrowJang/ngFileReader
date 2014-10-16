@@ -76,10 +76,11 @@
         onReaded:"&",
         readMethod:"=",
         readEncoding:"=",
+        accept:"@",
         filereader:"@"
       },
 
-      template:"<input type='file'/>",
+      template:"<input type='file' accept='{{accept}}' />",
 
       /**
       * @param {Scope} scope

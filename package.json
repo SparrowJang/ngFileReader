@@ -1,6 +1,6 @@
 {
   "name": "ngFileReader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is file reader component on angular.",
   "main": "src/ngFileReader",
   "keywords": [

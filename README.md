@@ -81,6 +81,9 @@ Set the attr on tag.
 debug-mode="true"
 ```
 
+###accept
+accept file extensions.
+
 ##Parameter
 
 ###read-method
