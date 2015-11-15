@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ngfilereader : This is file reader component on angular.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ngfilereader</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/SparrowJang/ngFileReader">View on GitHub</a>
+
+          <h1 id="project_title">Ngfilereader</h1>
+          <h2 id="project_tagline">This is file reader component on angular.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/SparrowJang/ngFileReader/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/SparrowJang/ngFileReader/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="ngfilereader" class="anchor" href="#ngfilereader" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngFileReader</h1>
+
+<p><img src="images/screenprint.png" alt="demo image"></p>
+
+<p>This is file reader component on angular.</p>
+
+<h2>
+<a id="livedemo" class="anchor" href="#livedemo" aria-hidden="true"><span class="octicon octicon-link"></span></a>LiveDemo</h2>
+
+<p><a href="http://www.sparrowjang.com/example/bower_components/ngFileReader/example/">demo</a></p>
+
+<h2>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h2>
+
+<ul>
+<li>IE8+</li>
+<li>chrome</li>
+<li>firefox</li>
+</ul>
+
+<h2>
+<a id="dependency" class="anchor" href="#dependency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependency</h2>
+
+<ul>
+<li>angularjs</li>
+<li>jQuery</li>
+<li><a href="https://github.com/Jahdrien/FileReader">FileReader</a></li>
+</ul>
+
+<p>You need load <strong>jQuery</strong> and <strong>FileReader</strong> if browser is not support <code>FileReader</code>.</p>
+
+<p>And The base64 size only limit 32kb if you use base64 to set image on IE8.</p>
+
+<p>You also use other <a href="https://github.com/Phlow2001/FileReader">FileReader</a> version,if you don't want to use <code>fixed</code> position by flash.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-source-shell"><pre>bower install ngFileReader</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Set some attrs of element.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ng-file-reader</span> <span class="pl-e">on-readed</span>=<span class="pl-s"><span class="pl-pds">"</span>onReaded( event, file )<span class="pl-pds">"</span></span> <span class="pl-e">read-method</span>=<span class="pl-s"><span class="pl-pds">"</span>readMethod<span class="pl-pds">"</span></span>  <span class="pl-e">multiple</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+
+size:{{file.size | fileSize}}
+
+&lt;<span class="pl-ent">img</span> <span class="pl-e">ng-src</span>=<span class="pl-s"><span class="pl-pds">"</span>{{img}}<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p>Set a reader method.</p>
+
+<div class="highlight highlight-source-js"><pre>$scope.readMethod <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>readAsDataURL<span class="pl-pds">"</span></span>;</pre></div>
+
+<p>Add a <code>on-readed</code> callback to set file size and img data.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">$scope</span>.<span class="pl-en">onReaded</span> <span class="pl-k">=</span> <span class="pl-k">function</span>( <span class="pl-smi">e</span>, <span class="pl-smi">file</span> ){
+
+  $scope.img <span class="pl-k">=</span> e.<span class="pl-c1">target</span>.result;
+  $scope.file <span class="pl-k">=</span> file;
+};</pre></div>
+
+<h2>
+<a id="attribute" class="anchor" href="#attribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attribute</h2>
+
+<h3>
+<a id="filereader" class="anchor" href="#filereader" aria-hidden="true"><span class="octicon octicon-link"></span></a>filereader</h3>
+
+<p>This is <code>swf</code> path, if you use ie8 ~ ie9.</p>
+
+<h3>
+<a id="multiple" class="anchor" href="#multiple" aria-hidden="true"><span class="octicon octicon-link"></span></a>multiple</h3>
+
+<p>Input multiple property.</p>
+
+<h3>
+<a id="debug-mode" class="anchor" href="#debug-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>debug-mode</h3>
+
+<p>Use <code>swf</code> only.</p>
+
+<p><strong>ex:</strong></p>
+
+<p>Set the attr on tag.</p>
+
+<pre><code>debug-mode="true"
+</code></pre>
+
+<h3>
+<a id="accept" class="anchor" href="#accept" aria-hidden="true"><span class="octicon octicon-link"></span></a>accept</h3>
+
+<p>accept file extensions.</p>
+
+<h2>
+<a id="parameter" class="anchor" href="#parameter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameter</h2>
+
+<h3>
+<a id="read-method" class="anchor" href="#read-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>read-method</h3>
+
+<p>This is file reader method,when you selected file to call <code>read-method</code> method.</p>
+
+<p><strong>ex:</strong> <code>readAsDataURL</code>、<code>readAsText</code>、<code>readAsBinaryString</code></p>
+
+<p>Set the attr.</p>
+
+<div class="highlight highlight-source-js"><pre>read<span class="pl-k">-</span>method<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>readMethod<span class="pl-pds">"</span></span></pre></div>
+
+<p>Set a string value.</p>
+
+<div class="highlight highlight-source-js"><pre>$scope.readMethod <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>readAsDataURL<span class="pl-pds">"</span></span></pre></div>
+
+<h2>
+<a id="event" class="anchor" href="#event" aria-hidden="true"><span class="octicon octicon-link"></span></a>Event</h2>
+
+<h3>
+<a id="on-selected-event" class="anchor" href="#on-selected-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>on-selected <code>Event</code>
+</h3>
+
+<p>It will trigger this event if you has selected.</p>
+
+<h3>
+<a id="on-readed-event" class="anchor" href="#on-readed-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>on-readed <code>Event</code>
+</h3>
+
+<p>It will trigger this event When the selected file has readed by file reader.</p>
+
+<h2>
+<a id="filter" class="anchor" href="#filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filter</h2>
+
+<h3>
+<a id="filesize" class="anchor" href="#filesize" aria-hidden="true"><span class="octicon octicon-link"></span></a>fileSize</h3>
+
+<p>Transfer file size from number to unit.</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- 1048576 =&gt; 1 m --&gt;</span>
+{{file.size | fileSize}}</pre></div>
+
+<p>You can write this if you need round off to the 2nd decimal place.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>{{file.size | fileSize:2}}</pre></div>
+
+<h2>
+<a id="run" class="anchor" href="#run" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run</h2>
+
+<p>run a server:</p>
+
+<div class="highlight highlight-source-shell"><pre>grunt server</pre></div>
+
+<p>Finally,open your brower,enter <a href="http://localhost/example/index.html">http://localhost:3000/example/index.html</a>.</p>
+
+<h2>
+<a id="minification" class="anchor" href="#minification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minification</h2>
+
+<p>Just run <code>npm install</code> to install dependencies. Then run <code>grunt</code> for minification.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ngfilereader maintained by <a href="https://github.com/SparrowJang">SparrowJang</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
