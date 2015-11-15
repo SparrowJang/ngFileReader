@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../vendor/angular.js"></script>
+  <script src="../vendor/swfobject.js"></script>
+  <script src="../vendor/jquery.FileReader.js"></script>
+  <script src="../src/ngFileReader.js"></script>
+</head>
+<body ng-app="ngFileReader" ng-controller="fileCtrl">
+
+<div ng-file-reader accept="image/gif, image/jpeg, image/png" on-selected="onSelected( files )" on-readed="onReaded( event, file )" read-method="readMethod" filereader="../vendor/filereader.swf" multiple debug-mode="true"></div>
+
+<img src="{{imgData}}" alt="" />
+
+size:
+
+{{file.size | fileSize}}
+
+
+<script>
+  var app = angular.module( 'ngFileReader' );
+
+  app.controller( 'fileCtrl', function( $scope ){
+
+    angular.extend( $scope, {
+
+      onSelected : function( files ){
+
+        //do something
+        //console.log( files[0] );
+        //console.log( 'select' );
+      },
+
+      readMethod:"readAsDataURL",
+
+      onReaded : function( e, file ){
+
+        //console.log( e );
+        //console.log( file.name );
+        $scope.imgData = e.target.result;
+        $scope.file = file;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
