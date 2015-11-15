@@ -7,7 +7,7 @@ This is file reader component on angular.
 
 ##LiveDemo
 
-[demo](http://www.sparrowjang.com/example/bower_components/ngFileReader/example/)
+[demo](http://www.sparrowjang.com/ngFileReader/example/index.html)
 
 ##Support
 
