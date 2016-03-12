@@ -1,6 +1,6 @@
 {
   "name": "ngFileReader",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "authors": [
     "SparrowJang <sparrow.jang@gmail.com>"
   ],
@@ -12,8 +12,8 @@
     "html5",
     "flash"
   ],
-  "dependencies":{
-    "angular": "~1.2.12"
+  "dependencies": {
+    "angular": "~1.5.0"
   },
   "license": "MIT",
   "ignore": [
