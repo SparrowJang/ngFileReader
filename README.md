@@ -68,6 +68,12 @@ $scope.onReaded = function( e, file ){
 };
 ```
 
+You are able to follow this If you use browserfiy.
+
+```js
+var app = angular.module('myApp', [require('ngFileReader')]);
+```
+
 ##Attribute
 
 ###filereader
