@@ -12,8 +12,8 @@ module.exports = function( grunt ) {
         banner: '/*! <%= pkg.name %> <%= pkg.version %> | Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> | <%= pkg.license %> license*/\n'
       },
       build: {
-        src: '<%= pkg.main %>.js',
-        dest: '<%= pkg.main %>.min.js'
+        src: '<%= pkg.main %>',
+        dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
     express: {

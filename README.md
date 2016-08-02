@@ -34,6 +34,12 @@ You also use other [FileReader](https://github.com/Phlow2001/FileReader) version
 bower install ngFileReader
 ```
 
+or
+
+```bash
+npm install ngFileReader
+```
+
 ##Usage
 
 Set some attrs of element.

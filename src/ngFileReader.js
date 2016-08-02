@@ -3,9 +3,11 @@
 
   'use strict';
 
-  var app = angular.module( 'ngFileReader', [] );
+  var APP_NAME = 'ngFileReader';
 
-  app.directive( "ngFileReader", function(){
+  var app = angular.module( APP_NAME, [] );
+
+  app.directive( 'ngFileReader', function(){
 
     /**
     * @param {Object} attrs
@@ -24,7 +26,7 @@
     */
     var init_ = function( $elem, inputParams ){
 
-      var $input = $elem.find( "input" );
+      var $input = $elem.find( 'input' );
 
       if ( inputParams.multiple ) $input.attr( 'multiple', true );
 
@@ -195,6 +197,7 @@
       };
   });
 
+  if ( typeof module !== "undefined" ) module.exports = APP_NAME;
 
 })( angular );
 
