@@ -159,6 +159,7 @@
 
           events.onReadered( scope, files );
 
+          $elem.val('');
           $elem.find("input").val('');
           //console.log( 'change' );
           scope.$apply();
@@ -189,7 +190,7 @@
 
               break;
             }
-            
+
           }
 
           return output.toFixed( bit ? bit : 1 ) + " " + ( size_types[index]? size_types[index]:"" );
@@ -200,4 +201,3 @@
   if ( typeof module !== "undefined" ) module.exports = APP_NAME;
 
 })( angular );
-
