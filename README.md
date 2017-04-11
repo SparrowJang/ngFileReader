@@ -5,18 +5,18 @@ ngFileReader
 
 This is file reader component on angular.
 
-##LiveDemo
+## LiveDemo
 
 [demo](http://www.sparrowjang.com/ngFileReader/example/index.html)
 
-##Support
+## Support
 
 * IE8+
 * chrome
 * firefox
 
 
-##Dependency
+## Dependency
 
 * angularjs
 * jQuery
@@ -28,7 +28,7 @@ And The base64 size only limit 32kb if you use base64 to set image on IE8.
 
 You also use other [FileReader](https://github.com/Phlow2001/FileReader) version,if you don't want to use `fixed` position by flash.
 
-##Install
+## Install
 
 ```bash
 bower install ngFileReader
@@ -40,7 +40,7 @@ or
 npm install ngFileReader
 ```
 
-##Usage
+## Usage
 
 Set some attrs of element.
 
@@ -74,15 +74,15 @@ You are able to follow this If you use browserfiy.
 var app = angular.module('myApp', [require('ngFileReader')]);
 ```
 
-##Attribute
+## Attribute
 
-###filereader
+### filereader
 This is `swf` path, if you use ie8 ~ ie9.
 
-###multiple
+### multiple
 Input multiple property.
 
-###debug-mode
+### debug-mode
 Use `swf` only.
 
 **ex:**
@@ -93,12 +93,12 @@ Set the attr on tag.
 debug-mode="true"
 ```
 
-###accept
+### accept
 accept file extensions.
 
 ##Parameter
 
-###read-method
+### read-method
 
 This is file reader method,when you selected file to call `read-method` method.
 
@@ -116,17 +116,17 @@ Set a string value.
 $scope.readMethod = "readAsDataURL"
 ```
 
-##Event
+## Event
 
-###on-selected `Event`
+### on-selected `Event`
 It will trigger this event if you has selected.
 
-###on-readed `Event`
+### on-readed `Event`
 It will trigger this event When the selected file has readed by file reader.
 
-##Filter
+## Filter
 
-###fileSize
+### fileSize
 
 Transfer file size from number to unit.
 
@@ -141,7 +141,7 @@ You can write this if you need round off to the 2nd decimal place.
 {{file.size | fileSize:2}}
 ```
 
-##Run
+## Run
  
 run a server:
 
@@ -152,7 +152,7 @@ grunt server
 Finally,open your brower,enter [http://localhost:3000/example/index.html](http://localhost/example/index.html).
 
 
-##Minification
+## Minification
 
 Just run `npm install` to install dependencies. Then run `grunt` for minification.
 
